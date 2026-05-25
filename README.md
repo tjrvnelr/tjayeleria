@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+# Tjayeleria — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to the portfolio repository. This site showcases projects, case studies, and the technical skills behind them. Replace placeholders below with your personal details, links, and project descriptions.
 
-## Available Scripts
+## About
 
-In the project directory, you can run:
+A concise one-line bio goes here. Example: "Full-stack developer focused on React, Node.js, and cloud-native apps. Passionate about UX and performance." Keep it short and specific.
 
-### `npm start`
+## Highlights
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Years of experience: 3+ years
+- Primary technologies: React, Node.js, TypeScript, AWS 
+- Areas of focus: Web apps, mobile-friendly design, performance optimization
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Projects
 
-### `npm test`
+Below are example project entries. Copy the format and replace with your projects.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Project One — Project Title
+- Description: One-sentence summary of what the app does and the impact or problem it solves.
+- Tech: React, TypeScript, Node.js, PostgreSQL
+- Live: https://your-live-link.example (or "Demo: private")
+- Repo: https://github.com/yourusername/project-one
 
-### `npm run build`
+### Project Two — Project Title
+- Description: Short summary and outcome (users, improvements, metrics if available).
+- Tech: React Native, Firebase
+- Live: Play Store / App Store / Demo link
+- Repo: https://github.com/yourusername/project-two
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+(Repeat for each project — keep 2–6 featured projects with links and short tech lists.)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to run locally
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repo:
+   git clone https://github.com/yourusername/your-portfolio-repo.git
+2. Install dependencies:
+   npm install
+3. Start dev server:
+   npm start
 
-### `npm run eject`
+Build for production:
+   npm run build
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Run tests:
+   npm test
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Add any project-specific environment variables or setup steps here (e.g., API keys, .env example).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tech Stack
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Primary: React, TypeScript, Node.js
+Tools & infra: Git, Docker, AWS / Vercel / Netlify
+Databases: PostgreSQL, MongoDB (as applicable)
 
-## Learn More
+## Design & Accessibility
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Mention your approach to UX, responsive design, accessibility, and testing here if relevant.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
 
-### Code Splitting
+- Email: your.email@example.com
+- LinkedIn: https://linkedin.com/in/yourprofile
+- Twitter / GitHub: @yourhandle
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Resume
 
-### Analyzing the Bundle Size
+Link to a resume or CV (optional): https://your-link-to-resume.example
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Contributing
 
-### Making a Progressive Web App
+This repository is primarily a personal portfolio. Pull requests are welcome for improvements to the site itself (content, accessibility fixes, build optimizations). Please open an issue first for bigger changes.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## License
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This portfolio content is available under the MIT License — replace if you prefer a different license.
