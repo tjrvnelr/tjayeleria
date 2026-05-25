@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
-import { motion, useScroll, useSpring } from 'framer-motion';
+import { useEffect, useMemo, useState } from "react";
+import { motion, useScroll, useSpring } from "framer-motion";
 import {
   FiArrowUpRight,
   FiBriefcase,
@@ -11,7 +11,7 @@ import {
   FiMail,
   FiMenu,
   FiX,
-} from 'react-icons/fi';
+} from "react-icons/fi";
 import {
   SiCss,
   SiFigma,
@@ -22,95 +22,95 @@ import {
   SiReact,
   SiTailwindcss,
   SiTypescript,
-} from 'react-icons/si';
-import './App.css';
+} from "react-icons/si";
+import "./App.css";
 
-const sections = ['home', 'about', 'stack', 'projects', 'services', 'contact'];
+const sections = ["home", "about", "stack", "projects", "services", "contact"];
 
 const skills = [
-  'Product UI',
-  'Design Systems',
-  'React Architecture',
-  'API Integration',
-  'Performance',
-  'Accessibility',
+  "Product UI",
+  "Design Systems",
+  "React Architecture",
+  "API Integration",
+  "Performance",
+  "Accessibility",
 ];
 
 const stackGroups = [
   {
-    title: 'Frontend',
+    title: "Frontend",
     items: [
-      { name: 'React', icon: SiReact },
-      { name: 'TypeScript', icon: SiTypescript },
-      { name: 'JavaScript', icon: SiJavascript },
-      { name: 'Tailwind', icon: SiTailwindcss },
-      { name: 'CSS', icon: SiCss },
+      { name: "React", icon: SiReact },
+      { name: "TypeScript", icon: SiTypescript },
+      { name: "JavaScript", icon: SiJavascript },
+      { name: "Tailwind", icon: SiTailwindcss },
+      { name: "CSS", icon: SiCss },
     ],
   },
   {
-    title: 'Motion & Product',
+    title: "Motion & Product",
     items: [
-      { name: 'Framer', icon: SiFramer },
-      { name: 'Figma', icon: SiFigma },
-      { name: 'Node.js', icon: SiNodedotjs },
-      { name: 'Firebase', icon: SiFirebase },
+      { name: "Framer", icon: SiFramer },
+      { name: "Figma", icon: SiFigma },
+      { name: "Node.js", icon: SiNodedotjs },
+      { name: "Firebase", icon: SiFirebase },
     ],
   },
 ];
 
 const projects = [
   {
-    title: 'Nova Analytics',
-    category: 'SaaS Dashboard',
+    title: "Nova Analytics",
+    category: "SaaS Dashboard",
     description:
-      'A conversion dashboard with clean data views, role-aware navigation, and fast-loading charts.',
-    tags: ['React', 'Tailwind', 'Charts'],
-    accent: 'from-cyan-400 to-emerald-400',
+      "A conversion dashboard with clean data views, role-aware navigation, and fast-loading charts.",
+    tags: ["React", "Tailwind", "Charts"],
+    accent: "from-cyan-400 to-emerald-400",
   },
   {
-    title: 'Orbit Studio',
-    category: 'Creative Platform',
+    title: "Orbit Studio",
+    category: "Creative Platform",
     description:
-      'A collaborative project workspace with motion-rich previews, asset boards, and client review flows.',
-    tags: ['Framer Motion', 'Firebase', 'UX'],
-    accent: 'from-violet-400 to-rose-400',
+      "A collaborative project workspace with motion-rich previews, asset boards, and client review flows.",
+    tags: ["Framer Motion", "Firebase", "UX"],
+    accent: "from-violet-400 to-rose-400",
   },
   {
-    title: 'Pulse Commerce',
-    category: 'E-commerce UI',
+    title: "Pulse Commerce",
+    category: "E-commerce UI",
     description:
-      'A premium storefront experience focused on visual merchandising, accessibility, and checkout clarity.',
-    tags: ['React', 'A11y', 'Performance'],
-    accent: 'from-amber-300 to-orange-500',
+      "A premium storefront experience focused on visual merchandising, accessibility, and checkout clarity.",
+    tags: ["React", "A11y", "Performance"],
+    accent: "from-amber-300 to-orange-500",
   },
 ];
 
 const services = [
   {
     icon: FiCode,
-    title: 'Frontend Engineering',
-    body: 'Responsive React interfaces, reusable components, and production-ready interaction states.',
+    title: "Frontend Engineering",
+    body: "Responsive React interfaces, reusable components, and production-ready interaction states.",
   },
   {
     icon: FiBriefcase,
-    title: 'Product Experience',
-    body: 'Focused flows, information architecture, and UI systems that make complex products easier to use.',
+    title: "Product Experience",
+    body: "Focused flows, information architecture, and UI systems that make complex products easier to use.",
   },
   {
     icon: FiCheckCircle,
-    title: 'Optimization',
-    body: 'Performance tuning, accessibility reviews, and code quality improvements for smoother releases.',
+    title: "Optimization",
+    body: "Performance tuning, accessibility reviews, and code quality improvements for smoother releases.",
   },
 ];
 
 const achievements = [
-  'Shipped 20+ production web experiences',
-  'Improved product conversion through UX refinements',
-  'Built maintainable component systems for scaling teams',
+  "Shipped 20+ production web experiences",
+  "Improved product conversion through UX refinements",
+  "Built maintainable component systems for scaling teams",
 ];
 
 function App() {
-  const [activeSection, setActiveSection] = useState('home');
+  const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [cursor, setCursor] = useState({ x: -100, y: -100 });
   const { scrollYProgress } = useScroll();
@@ -120,9 +120,12 @@ function App() {
     () =>
       sections.map((section) => ({
         id: section,
-        label: section === 'stack' ? 'Tech Stack' : section[0].toUpperCase() + section.slice(1),
+        label:
+          section === "stack"
+            ? "Tech Stack"
+            : section[0].toUpperCase() + section.slice(1),
       })),
-    []
+    [],
   );
 
   useEffect(() => {
@@ -134,7 +137,7 @@ function App() {
           }
         });
       },
-      { rootMargin: '-40% 0px -55% 0px' }
+      { rootMargin: "-40% 0px -55% 0px" },
     );
 
     sections.forEach((id) => {
@@ -146,13 +149,14 @@ function App() {
   }, []);
 
   useEffect(() => {
-    const handleMouseMove = (event) => setCursor({ x: event.clientX, y: event.clientY });
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    const handleMouseMove = (event) =>
+      setCursor({ x: event.clientX, y: event.clientY });
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   const scrollTo = (id) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
     setMenuOpen(false);
   };
 
@@ -161,13 +165,19 @@ function App() {
       <motion.div className="scroll-progress" style={{ scaleX }} />
       <div
         className="interactive-cursor hidden lg:block"
-        style={{ transform: `translate3d(${cursor.x - 12}px, ${cursor.y - 12}px, 0)` }}
+        style={{
+          transform: `translate3d(${cursor.x - 12}px, ${cursor.y - 12}px, 0)`,
+        }}
       />
       <ParticleField />
 
       <header className="fixed left-0 right-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-8">
-          <button className="text-left" onClick={() => scrollTo('home')} aria-label="Go to home">
+          <button
+            className="text-left"
+            onClick={() => scrollTo("home")}
+            aria-label="Go to home"
+          >
             <span className="block text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
               TJ
             </span>
@@ -178,7 +188,7 @@ function App() {
             {navItems.map((item) => (
               <button
                 key={item.id}
-                className={`nav-pill ${activeSection === item.id ? 'active' : ''}`}
+                className={`nav-pill ${activeSection === item.id ? "active" : ""}`}
                 onClick={() => scrollTo(item.id)}
               >
                 {item.label}
@@ -222,14 +232,19 @@ function App() {
             <Reveal>
               <p className="eyebrow">Available for select projects</p>
               <h1 className="mt-5 max-w-4xl text-5xl font-semibold leading-tight text-white md:text-7xl">
-                Building elegant web experiences with precise interaction design.
+                Building elegant web experiences with precise interaction
+                design.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-                I craft fast, accessible, and visually polished React interfaces for founders,
-                agencies, and product teams who care about details.
+                I craft fast, accessible, and visually polished React interfaces
+                for founders, agencies, and product teams who care about
+                details.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <button className="primary-button" onClick={() => scrollTo('projects')}>
+                <button
+                  className="primary-button"
+                  onClick={() => scrollTo("projects")}
+                >
                   View Projects <FiArrowUpRight />
                 </button>
                 <a className="secondary-button" href="/resume.pdf" download>
@@ -262,13 +277,17 @@ function App() {
 
         <section id="about" className="section">
           <div className="mx-auto grid max-w-7xl gap-10 px-5 lg:grid-cols-[0.85fr_1.15fr] lg:px-8">
-            <SectionIntro eyebrow="About Me" title="A pragmatic developer with a designer's eye." />
+            <SectionIntro
+              eyebrow="About Me"
+              title="A pragmatic developer with a designer's eye."
+            />
             <Reveal>
               <div className="glass-panel p-6 md:p-8">
                 <p className="text-lg leading-8 text-slate-300">
-                  I specialize in turning product ideas into calm, polished web interfaces. My work
-                  blends React engineering, visual systems, motion, and performance so every screen
-                  feels intentional from first load to final interaction.
+                  I specialize in turning product ideas into calm, polished web
+                  interfaces. My work blends React engineering, visual systems,
+                  motion, and performance so every screen feels intentional from
+                  first load to final interaction.
                 </p>
                 <div className="mt-8 grid gap-3 sm:grid-cols-2">
                   {skills.map((skill) => (
@@ -284,7 +303,10 @@ function App() {
 
         <section id="stack" className="section">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <SectionIntro eyebrow="Tech Stack" title="Tools I use to ship refined experiences." />
+            <SectionIntro
+              eyebrow="Tech Stack"
+              title="Tools I use to ship refined experiences."
+            />
             <div className="mt-10 grid gap-5 lg:grid-cols-2">
               {stackGroups.map((group, groupIndex) => (
                 <Reveal key={group.title} delay={groupIndex * 0.08}>
@@ -298,11 +320,15 @@ function App() {
                             key={item.name}
                             className="tech-tile"
                             whileHover={{ y: -6, scale: 1.02 }}
-                            transition={{ type: 'spring', stiffness: 260, damping: 18 }}
+                            transition={{
+                              type: "spring",
+                              stiffness: 260,
+                              damping: 18,
+                            }}
                           >
                             <Icon className="text-3xl text-cyan-300" />
                             <span>{item.name}</span>
-                            <small>{String(index + 1).padStart(2, '0')}</small>
+                            <small>{String(index + 1).padStart(2, "0")}</small>
                           </motion.div>
                         );
                       })}
@@ -317,16 +343,29 @@ function App() {
         <section id="projects" className="section">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
             <div className="flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-              <SectionIntro eyebrow="Projects" title="Selected work with thoughtful interaction." />
-              <a className="text-link" href="https://github.com/" target="_blank" rel="noreferrer">
+              <SectionIntro
+                eyebrow="Projects"
+                title="Selected work with thoughtful interaction."
+              />
+              <a
+                className="text-link"
+                href="https://github.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 More on GitHub <FiArrowUpRight />
               </a>
             </div>
             <div className="mt-10 grid gap-5 lg:grid-cols-3">
               {projects.map((project, index) => (
                 <Reveal key={project.title} delay={index * 0.08}>
-                  <motion.article className="project-card" whileHover={{ y: -10 }}>
-                    <div className={`project-preview bg-gradient-to-br ${project.accent}`}>
+                  <motion.article
+                    className="project-card"
+                    whileHover={{ y: -10 }}
+                  >
+                    <div
+                      className={`project-preview bg-gradient-to-br ${project.accent}`}
+                    >
                       <div className="preview-window">
                         <span />
                         <span />
@@ -341,7 +380,9 @@ function App() {
                     <p className="mt-6 text-sm uppercase tracking-[0.25em] text-cyan-300">
                       {project.category}
                     </p>
-                    <h3 className="mt-3 text-2xl font-semibold">{project.title}</h3>
+                    <h3 className="mt-3 text-2xl font-semibold">
+                      {project.title}
+                    </h3>
                     <p className="mt-4 leading-7 text-slate-300">
                       {project.description}
                     </p>
@@ -353,10 +394,20 @@ function App() {
                       ))}
                     </div>
                     <div className="mt-7 flex gap-3">
-                      <a className="project-link" href="https://example.com" target="_blank" rel="noreferrer">
+                      <a
+                        className="project-link"
+                        href="https://example.com"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         Live <FiArrowUpRight />
                       </a>
-                      <a className="project-link" href="https://github.com/" target="_blank" rel="noreferrer">
+                      <a
+                        className="project-link"
+                        href="https://github.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         Code <FiGithub />
                       </a>
                     </div>
@@ -369,7 +420,10 @@ function App() {
 
         <section id="services" className="section">
           <div className="mx-auto max-w-7xl px-5 lg:px-8">
-            <SectionIntro eyebrow="Expertise" title="Clear strategy, careful execution." />
+            <SectionIntro
+              eyebrow="Expertise"
+              title="Clear strategy, careful execution."
+            />
             <div className="mt-10 grid gap-5 md:grid-cols-3">
               {services.map((service, index) => {
                 const Icon = service.icon;
@@ -399,17 +453,33 @@ function App() {
             <div>
               <SectionIntro eyebrow="Contact" title="Have a project in mind?" />
               <p className="mt-6 max-w-xl leading-8 text-slate-300">
-                Send a note about the product, timeline, and goals. I usually respond within one
-                business day.
+                Send a note about the product, timeline, and goals. I usually
+                respond within one business day.
               </p>
               <div className="mt-8 flex gap-3">
-                <a className="icon-button" href="mailto:hello@example.com" aria-label="Email">
+                <a
+                  className="icon-button"
+                  href="mailto:hello@example.com"
+                  aria-label="Email"
+                >
                   <FiMail />
                 </a>
-                <a className="icon-button" href="https://github.com/" target="_blank" rel="noreferrer" aria-label="GitHub">
+                <a
+                  className="icon-button"
+                  href="https://github.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="GitHub"
+                >
                   <FiGithub />
                 </a>
-                <a className="icon-button" href="https://linkedin.com/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+                <a
+                  className="icon-button"
+                  href="https://linkedin.com/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="LinkedIn"
+                >
                   <FiLinkedin />
                 </a>
               </div>
@@ -418,15 +488,29 @@ function App() {
               <form className="glass-panel grid gap-4 p-5 md:p-7">
                 <label>
                   <span>Name</span>
-                  <input type="text" name="name" autoComplete="name" placeholder="Your name" />
+                  <input
+                    type="text"
+                    name="name"
+                    autoComplete="name"
+                    placeholder="Your name"
+                  />
                 </label>
                 <label>
                   <span>Email</span>
-                  <input type="email" name="email" autoComplete="email" placeholder="you@example.com" />
+                  <input
+                    type="email"
+                    name="email"
+                    autoComplete="email"
+                    placeholder="you@example.com"
+                  />
                 </label>
                 <label>
                   <span>Message</span>
-                  <textarea name="message" rows="5" placeholder="Tell me about the project" />
+                  <textarea
+                    name="message"
+                    rows="5"
+                    placeholder="Tell me about the project"
+                  />
                 </label>
                 <button className="primary-button justify-center" type="submit">
                   Send Message <FiArrowUpRight />
@@ -439,7 +523,10 @@ function App() {
 
       <footer className="border-t border-white/10 px-5 py-8 text-sm text-slate-400">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 md:flex-row md:items-center md:justify-between">
-          <p>Copyright {new Date().getFullYear()} Tjay Eleria. All rights reserved.</p>
+          <p>
+            Copyright {new Date().getFullYear()} Tjay Eleria. All rights
+            reserved.
+          </p>
           <div className="flex flex-wrap gap-4">
             {navItems.slice(0, 5).map((item) => (
               <button key={item.id} onClick={() => scrollTo(item.id)}>
@@ -460,7 +547,7 @@ function ParticleField() {
         <span
           key={index}
           style={{
-            '--i': index,
+            "--i": index,
             left: `${(index * 13 + 8) % 100}%`,
             top: `${(index * 19 + 12) % 100}%`,
           }}
