@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "TJ",
+  "name": "Tjay Eleria Portfolio",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "1x1 ID.jpg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "1x1 ID.jpg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "1x1 ID.jpg",
       "type": "image/png",
       "sizes": "512x512"
     }

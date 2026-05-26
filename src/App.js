@@ -181,7 +181,6 @@ function App() {
             <span className="block text-sm font-semibold uppercase tracking-[0.3em] text-cyan-300">
               TJ
             </span>
-            <span className="text-base font-semibold">Tjay Eleria</span>
           </button>
 
           <div className="hidden items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-sm text-slate-300 md:flex">
@@ -257,19 +256,11 @@ function App() {
               <div className="profile-card">
                 <div className="profile-glow" />
                 <img
-                  src="/profile-portrait.svg"
+                  src="/1x1 ID.jpg "
                   alt="Abstract portrait of Tjay Eleria"
                   loading="lazy"
                   className="relative z-10 w-full"
                 />
-                <div className="profile-stat left-5 top-6">
-                  <span>5+</span>
-                  Years building UI
-                </div>
-                <div className="profile-stat bottom-6 right-5">
-                  <span>98</span>
-                  Lighthouse focus
-                </div>
               </div>
             </Reveal>
           </div>
