@@ -61,7 +61,7 @@ export default function Resume() {
             className="relative z-10 flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <motion.a
-              href="/resume.pdf"
+              href="/src/resume.pdf"
               download
               className="group flex items-center gap-3 px-8 py-4 bg-[#3F72AF] text-[#F9F7F7] font-semibold rounded-xl hover:bg-[#3F72AF]/90 transition-all duration-300 shadow-lg shadow-[#3F72AF]/40 hover:shadow-[#3F72AF]/60 w-full sm:w-auto justify-center"
               whileHover={{ scale: 1.03, y: -2 }}
@@ -69,18 +69,6 @@ export default function Resume() {
             >
               <FiDownload size={18} className="group-hover:animate-bounce" />
               Download PDF
-            </motion.a>
-
-            <motion.a
-              href="/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group flex items-center gap-3 px-8 py-4 border border-[#F9F7F7]/20 text-[#F9F7F7]/70 font-semibold rounded-xl hover:border-[#F9F7F7]/40 hover:text-[#F9F7F7] hover:bg-[#F9F7F7]/5 transition-all duration-300 w-full sm:w-auto justify-center"
-              whileHover={{ scale: 1.03, y: -2 }}
-              whileTap={{ scale: 0.97 }}
-            >
-              <FiEye size={18} />
-              Preview Online
             </motion.a>
           </motion.div>
 
@@ -92,7 +80,7 @@ export default function Resume() {
           >
             <span>Updated May 2026</span>
             <span className="w-1 h-1 rounded-full bg-[#F9F7F7]/20" />
-            <span>2 pages</span>
+            <span>1 pages</span>
             <span className="w-1 h-1 rounded-full bg-[#F9F7F7]/20" />
             <span>PDF format</span>
           </motion.div>

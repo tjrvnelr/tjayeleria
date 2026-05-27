@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
-import { useRef } from "react";
-import { FiCode, FiLayers, FiZap, FiUsers } from "react-icons/fi";
+import { useRef, useState } from "react";
+import {
+  FiCode,
+  FiLayers,
+  FiMousePointer,
+  FiZap,
+  FiUsers,
+} from "react-icons/fi";
 import tjayPic from "../assets/image/tjaypic.jpg";
 
 const stats = [
@@ -16,21 +22,29 @@ const traits = [
     icon: FiCode,
     title: "Clean Code",
     desc: "Writing maintainable, scalable, and well-documented code.",
+    detail:
+      "I focus on reusable components, readable structure, and practical solutions that are easy to improve later.",
   },
   {
     icon: FiLayers,
     title: "System Design",
     desc: "Architecting robust solutions from concept to production.",
+    detail:
+      "I like turning broad ideas into clear flows, simple data structures, and interfaces that feel organized.",
   },
   {
     icon: FiZap,
     title: "Performance",
     desc: "Optimizing for speed, accessibility, and core web vitals.",
+    detail:
+      "I pay attention to smooth loading, responsive layouts, and interactions that feel fast on real devices.",
   },
   {
-    icon: FiUsers,
-    title: "Collaboration",
-    desc: "Thriving in cross-functional teams with clear communication.",
+    icon: FiMousePointer,
+    title: "Minimalist UI/UX",
+    desc: "Creating clean and intuitive user interfaces.",
+    detail:
+      "I value direct communication, feedback, and building features that make sense for the people using them.",
   },
 ];
 
@@ -56,6 +70,9 @@ function AnimatedSection({
 }
 
 export default function About() {
+  const [activeTrait, setActiveTrait] = useState(0);
+  const active = traits[activeTrait];
+
   return (
     <section id="about" className="py-28 bg-[#F9F7F7] relative overflow-hidden">
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#3F72AF]/30 to-transparent" />
@@ -67,33 +84,27 @@ export default function About() {
               About Me
             </span>
             <h2 className="mt-2 text-4xl md:text-5xl font-bold text-[#112D4E] tracking-tight">
-              Crafting Digital Experiences
+              Creative Developer
             </h2>
             <div className="mt-4 w-16 h-1 bg-gradient-to-r from-[#3F72AF] to-[#112D4E] rounded-full mx-auto" />
           </div>
         </AnimatedSection>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+        <div className="grid lg:grid-cols-2 gap-20  items-center mb-20">
           <AnimatedSection delay={0.1}>
             <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0">
-                  <img
-                    className="w-full h-full object-cover"
-                    alt="Profile"
-                    src={tjayPic}
-                  />
+              <motion.div
+                className="absolute -inset-5 rounded-[2rem] border border-[#3F72AF]/20"
+                animate={{ rotate: [0, 1.5, 0], scale: [1, 1.02, 1] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              />
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:ml-auto lg:mr-0">
+                <img
+                  className="w-full h-full object-cover"
+                  alt="Profile"
+                  src={tjayPic}
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#112D4E]/60 via-transparent to-transparent" />
-              </div>
-              <div className="absolute -bottom-6 -right-6 lg:right-0 w-36 h-36 rounded-2xl bg-[#112D4E] flex flex-col items-center justify-center shadow-xl">
-                <span className="text-4xl font-bold text-[#F9F7F7]">5+</span>
-                <span className="text-[#3F72AF] text-xs font-medium mt-1 text-center leading-tight">
-                  Years of
-                  <br />
-                  Experience
-                </span>
-              </div>
-              <div className="absolute -top-4 -left-4 w-20 h-20 rounded-2xl bg-[#3F72AF] flex items-center justify-center shadow-lg">
-                <FiCode size={28} className="text-[#F9F7F7]" />
               </div>
             </div>
           </AnimatedSection>
@@ -101,27 +112,50 @@ export default function About() {
           <AnimatedSection delay={0.2}>
             <div className="space-y-6">
               <p className="text-[#112D4E]/70 text-lg leading-relaxed">
-                I'm a passionate full stack developer with over 5 years of
-                experience building modern web applications. I specialize in
-                React, TypeScript, and Node.js, with a deep love for creating
-                seamless user experiences.
+                I am an aspiring software engineer who enjoys creating modern 
+                and interactive digital projects. I am passionate about web 
+                development, UI/UX design, and learning new technologies. I like 
+                building clean and minimalist designs that improve user experience.
+                I always aim to develop skills that can help me grow as a professional
+                  software engineer.
               </p>
               <p className="text-[#112D4E]/70 text-lg leading-relaxed">
-                My philosophy is simple: write clean code, think about the user
-                first, and never stop learning. I've worked with startups and
-                enterprise teams alike, always bringing the same energy and
-                attention to detail.
+                I enjoy exploring creative ideas and turning them into
+                functional digital solutions. I am motivated to continuously
+                improve my coding and design abilities through practice and
+                experience. I value innovation, creativity, and problem-solving
+                in every project I create. My goal is to build impactful systems
+                that are both useful and visually appealing.
               </p>
 
               <div className="grid grid-cols-2 gap-4 pt-4">
-                {traits.map(({ icon: Icon, title, desc }) => (
-                  <motion.div
+                {traits.map(({ icon: Icon, title, desc }, index) => (
+                  <motion.button
                     key={title}
-                    className="p-4 rounded-xl bg-white border border-[#112D4E]/8 shadow-sm hover:shadow-md hover:border-[#3F72AF]/30 transition-all duration-300 group"
+                    type="button"
+                    aria-pressed={activeTrait === index}
+                    onClick={() => setActiveTrait(index)}
+                    className={`text-left p-4 rounded-xl bg-white border shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-[#3F72AF]/40 ${
+                      activeTrait === index
+                        ? "border-[#3F72AF]/50 shadow-md"
+                        : "border-[#112D4E]/8 hover:border-[#3F72AF]/30"
+                    }`}
                     whileHover={{ y: -3 }}
+                    whileTap={{ scale: 0.98 }}
                   >
-                    <div className="w-9 h-9 rounded-lg bg-[#3F72AF]/10 flex items-center justify-center mb-3 group-hover:bg-[#3F72AF]/20 transition-colors duration-300">
-                      <Icon size={18} className="text-[#3F72AF]" />
+                    <div
+                      className={`w-9 h-9 rounded-lg flex items-center justify-center mb-3 transition-colors duration-300 ${
+                        activeTrait === index
+                          ? "bg-[#3F72AF] text-white"
+                          : "bg-[#3F72AF]/10 text-[#3F72AF] group-hover:bg-[#3F72AF]/20"
+                      }`}
+                    >
+                      <Icon
+                        size={18}
+                        className={
+                          activeTrait === index ? "text-white" : "text-[#3F72AF]"
+                        }
+                      />
                     </div>
                     <h4 className="font-semibold text-[#112D4E] text-sm mb-1">
                       {title}
@@ -129,7 +163,7 @@ export default function About() {
                     <p className="text-[#112D4E]/50 text-xs leading-relaxed">
                       {desc}
                     </p>
-                  </motion.div>
+                  </motion.button>
                 ))}
               </div>
             </div>

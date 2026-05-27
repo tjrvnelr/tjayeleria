@@ -1,15 +1,13 @@
 import { motion } from "framer-motion";
 import { FiDownload, FiArrowDown } from "react-icons/fi";
-import { FiGithub, FiLinkedin, FiTwitter } from "react-icons/fi";
+import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { useEffect, useState } from "react";
 
 const roles = [
+  "Software Engineer",
   "Full Stack Developer",
-  "UI/UX Designer",
-  "React Specialist",
-  "Tech Enthusiast",
+  "UI/UX Designer"
 ];
-
 
 function ParticleBackground() {
   return (
@@ -106,7 +104,6 @@ export default function Hero() {
         initial="hidden"
         animate="visible"
       >
-
         <motion.h1
           variants={itemVariants}
           className="text-5xl md:text-7xl font-bold text-[#F9F7F7] mb-4 leading-tight tracking-tight"
@@ -114,7 +111,7 @@ export default function Hero() {
           Hi, I'm{" "}
           <span className="relative inline-block">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#3F72AF] to-[#F9F7F7]">
-              Tjay ELeria
+              Tjay Eleria
             </span>
           </span>
         </motion.h1>
@@ -133,9 +130,9 @@ export default function Hero() {
           variants={itemVariants}
           className="text-[#F9F7F7]/50 text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          I craft elegant digital experiences with clean code and thoughtful
-          design. Passionate about building products that make a real
-          difference.
+          I am a front-end developer passionate about creating interactive and
+          user-friendly digital projects. I enjoy learning new technologies and
+          building clean, minimalist designs that improve user experience.
         </motion.p>
 
         <motion.div
@@ -145,14 +142,14 @@ export default function Hero() {
           <motion.button
             onClick={() =>
               document
-                .getElementById("projects")
+                .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
             className="group px-8 py-3.5 bg-[#3F72AF] text-[#F9F7F7] font-semibold rounded-xl hover:bg-[#3F72AF]/90 transition-all duration-300 shadow-lg shadow-[#3F72AF]/30 hover:shadow-[#3F72AF]/50 hover:-translate-y-0.5"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
-            View My Work
+            Get in touch
           </motion.button>
           <motion.a
             href="/resume.pdf"
@@ -162,7 +159,7 @@ export default function Hero() {
             whileTap={{ scale: 0.97 }}
           >
             <FiDownload size={16} className="group-hover:animate-bounce" />
-            Download CV
+            Download Resume
           </motion.a>
         </motion.div>
 
@@ -177,7 +174,7 @@ export default function Hero() {
               href: "https://linkedin.com",
               label: "LinkedIn",
             },
-            { icon: FiTwitter, href: "https://twitter.com", label: "Twitter" },
+            { icon: FiMail, href: "https://gmail.com", label: "Gmail" },
           ].map(({ icon: Icon, href, label }) => (
             <motion.a
               key={label}

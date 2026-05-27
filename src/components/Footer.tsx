@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import {
   FiGithub,
   FiLinkedin,
-  FiTwitter,
+  FiMail,
   FiArrowUp,
   FiHeart,
 } from "react-icons/fi";
@@ -19,7 +19,7 @@ const navLinks = [
 const socials = [
   { icon: FiGithub, href: "https://github.com", label: "GitHub" },
   { icon: FiLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: FiTwitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: FiMail, href: "mailto:tjayeleria9@gmail.com", label: "Email" },
 ];
 
 export default function Footer() {

@@ -119,8 +119,7 @@ export default function Projects() {
           </h2>
           <div className="mt-4 w-16 h-1 bg-gradient-to-r from-[#3F72AF] to-[#112D4E] rounded-full mx-auto" />
           <p className="mt-5 text-[#112D4E]/50 max-w-xl mx-auto text-base">
-            A selection of projects that showcase my skills and passion for
-            building great products.
+            A selection of my recent work showcasing a range of web and mobile applications, APIs, and design systems.  
           </p>
         </motion.div>
 
@@ -171,7 +170,7 @@ export default function Projects() {
           className="text-center mt-12"
         >
           <a
-            href="https://github.com"
+            href="https://github.com/tjrvnelr"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-[#3F72AF] font-semibold hover:gap-3 transition-all duration-300 group"

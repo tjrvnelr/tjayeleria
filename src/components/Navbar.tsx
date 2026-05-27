@@ -62,7 +62,7 @@ export default function Navbar() {
           whileHover={{ scale: 1.05 }}
         >
           <span className="text-[#3F72AF]">&lt;</span>
-          Tjay
+          TJ
           <span className="text-[#3F72AF]">/&gt;</span>
         </motion.a>
 

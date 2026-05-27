@@ -120,8 +120,7 @@ export default function Skills() {
           </h2>
           <div className="mt-4 w-16 h-1 bg-gradient-to-r from-[#3F72AF] to-[#F9F7F7]/30 rounded-full mx-auto" />
           <p className="mt-5 text-[#F9F7F7]/50 max-w-xl mx-auto text-base">
-            A curated set of tools and technologies I use to build world-class
-            products.
+              A list of the tools and technologies I use to build modern web applications.
           </p>
         </motion.div>
 
