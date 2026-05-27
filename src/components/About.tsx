@@ -77,7 +77,7 @@ export default function About() {
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0">
                 <img
-                  src="\src\assets\image\1x1 ID.jpg"
+                  src="src\assets\image\1x1 ID.jpg"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
