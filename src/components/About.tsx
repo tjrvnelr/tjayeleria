@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { FiCode, FiLayers, FiZap, FiUsers } from "react-icons/fi";
-import img from '../assets/image/1x1-id.jpg';
 
 const stats = [
   { value: "5+", label: "Years Experience" },
@@ -77,9 +76,11 @@ export default function About() {
           <AnimatedSection delay={0.1}>
             <div className="relative">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-w-sm mx-auto lg:mx-0">
-               <img src={img}
-               className="w-full h-full object-cover"
-               alt="Profile" />
+                <img
+                  className="w-full h-full object-cover"
+                  alt="Profile"
+                  src="/src/assets/image/1x1-id.jpg"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#112D4E]/60 via-transparent to-transparent" />
               </div>
               <div className="absolute -bottom-6 -right-6 lg:right-0 w-36 h-36 rounded-2xl bg-[#112D4E] flex flex-col items-center justify-center shadow-xl">
