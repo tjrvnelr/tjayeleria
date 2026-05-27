@@ -79,8 +79,7 @@ export default function About() {
                 <img
                   className="w-full h-full object-cover"
                   alt="Profile"
-                  src="/src/assets/image/1x1-id.jpg"
-                />
+                  src='./assets/image/1x1-id.jpg'/>7
                 <div className="absolute inset-0 bg-gradient-to-t from-[#112D4E]/60 via-transparent to-transparent" />
               </div>
               <div className="absolute -bottom-6 -right-6 lg:right-0 w-36 h-36 rounded-2xl bg-[#112D4E] flex flex-col items-center justify-center shadow-xl">
