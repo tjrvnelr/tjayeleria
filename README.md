@@ -18,4 +18,4 @@ A modern, responsive personal portfolio built with Vite, React, TypeScript and T
 ## Contact
 
 - Github: https://github.com/tjrvnelr
-- LinkedIn: https://www.linkedin.com/in/tjrvnel
+- LinkedIn: https://www.linkedin.com/in/tjrvnelr
