@@ -1,26 +1,32 @@
-import { motion } from 'framer-motion';
-import { FiGithub, FiLinkedin, FiTwitter, FiArrowUp, FiHeart } from 'react-icons/fi';
+import { motion } from "framer-motion";
+import {
+  FiGithub,
+  FiLinkedin,
+  FiTwitter,
+  FiArrowUp,
+  FiHeart,
+} from "react-icons/fi";
 
 const navLinks = [
-  { label: 'Home', href: '#hero' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'Experience', href: '#experience' },
-  { label: 'Contact', href: '#contact' },
+  { label: "Home", href: "#hero" },
+  { label: "About", href: "#about" },
+  { label: "Skills", href: "#skills" },
+  { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
+  { label: "Contact", href: "#contact" },
 ];
 
 const socials = [
-  { icon: FiGithub, href: 'https://github.com', label: 'GitHub' },
-  { icon: FiLinkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-  { icon: FiTwitter, href: 'https://twitter.com', label: 'Twitter' },
+  { icon: FiGithub, href: "https://github.com", label: "GitHub" },
+  { icon: FiLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
+  { icon: FiTwitter, href: "https://twitter.com", label: "Twitter" },
 ];
 
 export default function Footer() {
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   const handleNav = (href: string) => {
-    const id = href.replace('#', '');
-    document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+    const id = href.replace("#", "");
+    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -30,20 +36,26 @@ export default function Footer() {
           <div>
             <a
               href="#hero"
-              onClick={(e) => { e.preventDefault(); handleNav('#hero'); }}
+              onClick={(e) => {
+                e.preventDefault();
+                handleNav("#hero");
+              }}
               className="inline-block text-[#F9F7F7] font-bold text-2xl tracking-tight mb-3"
             >
               <span className="text-[#3F72AF]">&lt;</span>
-              Alex
+              Tjay
               <span className="text-[#3F72AF]">/&gt;</span>
             </a>
             <p className="text-[#F9F7F7]/40 text-sm leading-relaxed max-w-xs">
-              Building elegant digital experiences with clean code and thoughtful design.
+              Building elegant digital experiences with clean code and
+              thoughtful design.
             </p>
           </div>
 
           <div>
-            <h4 className="text-[#F9F7F7]/30 text-xs font-semibold uppercase tracking-widest mb-4">Navigation</h4>
+            <h4 className="text-[#F9F7F7]/30 text-xs font-semibold uppercase tracking-widest mb-4">
+              Navigation
+            </h4>
             <ul className="grid grid-cols-2 gap-2">
               {navLinks.map((link) => (
                 <li key={link.label}>
@@ -59,7 +71,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-[#F9F7F7]/30 text-xs font-semibold uppercase tracking-widest mb-4">Connect</h4>
+            <h4 className="text-[#F9F7F7]/30 text-xs font-semibold uppercase tracking-widest mb-4">
+              Connect
+            </h4>
             <div className="flex gap-3 mb-4">
               {socials.map(({ icon: Icon, href, label }) => (
                 <motion.a
@@ -77,17 +91,17 @@ export default function Footer() {
               ))}
             </div>
             <a
-              href="mailto:alex@example.com"
+              href="mailto:tjayeleria9@gmail.com"
               className="text-[#F9F7F7]/50 text-sm hover:text-[#3F72AF] transition-colors duration-200"
             >
-              alex@example.com
+              tjayeleria9@gmail.com
             </a>
           </div>
         </div>
 
         <div className="border-t border-[#F9F7F7]/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-[#F9F7F7]/25 text-sm flex items-center gap-1.5">
-            &copy; {new Date().getFullYear()} Alex Morgan. Made with
+            &copy; {new Date().getFullYear()} Tjay ELeria. Made with
             <FiHeart size={12} className="text-[#3F72AF]" />
             and clean code.
           </p>

@@ -1,14 +1,17 @@
-import { useRef } from 'react';
-import { motion } from 'framer-motion';
-import { useInView } from 'framer-motion';
-import { FiDownload, FiEye, FiFileText } from 'react-icons/fi';
+import { useRef } from "react";
+import { motion } from "framer-motion";
+import { useInView } from "framer-motion";
+import { FiDownload, FiEye, FiFileText } from "react-icons/fi";
 
 export default function Resume() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
+  const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="resume" className="py-24 bg-[#F9F7F7] relative overflow-hidden">
+    <section
+      id="resume"
+      className="py-24 bg-[#F9F7F7] relative overflow-hidden"
+    >
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-[#3F72AF]/30 to-transparent" />
 
       <div className="max-w-4xl mx-auto px-6 md:px-10">
@@ -47,8 +50,8 @@ export default function Resume() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="relative z-10 text-[#F9F7F7]/50 text-base md:text-lg mb-8 max-w-lg mx-auto leading-relaxed"
           >
-            Get a comprehensive overview of my skills, experience, and achievements.
-            Available in PDF format — always up to date.
+            Get a comprehensive overview of my skills, experience, and
+            achievements. Available in PDF format — always up to date.
           </motion.p>
 
           <motion.div
